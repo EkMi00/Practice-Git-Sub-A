@@ -5,8 +5,10 @@ Git practice:
 2. Go to left side bar -> Source control
 3. Click on "+" for files that you changed. Your files are now staged. 
 4. Add commit message: eg. "Add pear" 
-5. Commit. Your commits are now made to your local repo.
-6. Open CLI -> go to the folder where Practice-Git is -> `git push`
+5. Click on Commit. Your commits are now made to your local repo.
+6. Click on Sync changes. Your local commits on your local repo are now pushed to the remote repo.
+    Alternatively: Open CLI -> go to the folder where Practice-Git is -> `git push`
+
 Done! Go to GitHub to see the latest changes.
 
 //////////////
