@@ -1,0 +1,13 @@
+Git practice: 
+1. Add, delete, or change the fruits below.
+2. Go to left side bar -> Source control
+3. Click on "+" for files that you changed -> Your files are now staged
+4. Add a suitable commit message: eg "Add pear" 
+5. Commit
+
+Fruits:
+watermelon
+banana
+strawberry
+grapes
+orange
