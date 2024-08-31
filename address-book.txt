@@ -1,7 +1,10 @@
-Address Book:
+Do more practice on address book. 
+See fruit.txt for git instructions.
 
-Add your details below and commit to github. 
+Address Book:
 1. 
-Chin Sek Yi
+John Doe
 +6511111111
 PGPR
+
+2.

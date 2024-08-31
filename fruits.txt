@@ -1,10 +1,15 @@
+//////////////
+
 Git practice: 
 1. Add, delete, or change the fruits below.
 2. Go to left side bar -> Source control
-3. Click on "+" for files that you changed -> Your files are now staged
-4. Add commit message: eg "Add pear" > Commit
-5. Commit
+3. Click on "+" for files that you changed. Your files are now staged. 
+4. Add commit message: eg. "Add pear" 
+5. Commit. Your commits are now made to your local repo.
+6. Open CLI -> go to the folder where Practice-Git is -> `git push`
 Done! Go to GitHub to see the latest changes.
+
+//////////////
 
 Fruits:
 watermelon
