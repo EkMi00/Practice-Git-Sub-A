@@ -1,5 +1,4 @@
-Do more practice on address book. 
-See fruit.txt for git instructions.
+See README.md for git instructions
 
 Address Book:
 1. 
