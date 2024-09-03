@@ -4,6 +4,11 @@
 
 ********************/
 
+DROP SCHEMA IF EXISTS credit;
+CREATE SCHEMA credit;
+USE credit;
+
+
 CREATE TABLE IF NOT EXISTS customers (
 	ssn CHAR(11) PRIMARY KEY,
 	first_name VARCHAR(32) NOT NULL ,

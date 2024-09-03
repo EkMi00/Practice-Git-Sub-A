@@ -3,7 +3,7 @@
   Populate the merchants table
 
 ****************************/
-
+USE credit;
 INSERT INTO merchants (code, name, country) VALUES ('88-1479529', 'Walsh, Olson and Mertz', 'Indonesia');
 INSERT INTO merchants (code, name, country) VALUES ('91-3366138', 'Aufderhar-O''Hara', 'Thailand');
 INSERT INTO merchants (code, name, country) VALUES ('17-7438780', 'Grady-Berge', 'Indonesia');

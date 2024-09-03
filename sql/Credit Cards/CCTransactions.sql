@@ -3,7 +3,7 @@
   Populate the transactions table
 
 ****************************/
-
+USE credit;
 INSERT INTO transactions VALUES (1, '5602248898280504', '45-4868966', '2017-12-18 07:36:32.876887', 918.27);
 INSERT INTO transactions VALUES (2, '5602248898280504', '89-8139335', '2017-12-11 04:20:00.676113', 286.18);
 INSERT INTO transactions VALUES (3, '5010128777483138', '67-2824462', '2017-12-15 18:23:25.625729', 746.62);

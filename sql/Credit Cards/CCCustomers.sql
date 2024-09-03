@@ -3,6 +3,7 @@
   Populate the customers table
 
 ****************************/
+USE credit;
 INSERT INTO customers (ssn, first_name, last_name, country)VALUES ('111-11-1111', 'John', 'Doe', 'Singapore');
 INSERT INTO customers (ssn, first_name, last_name, country) VALUES ('608-71-2352', 'Tabatha', 'Gianettini', 'Singapore');
 INSERT INTO customers (ssn, first_name, last_name, country) VALUES ('332-36-3186', 'Codi', 'Stevings', 'Singapore');

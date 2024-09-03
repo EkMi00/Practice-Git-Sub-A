@@ -1,18 +1,13 @@
-SELECT c.ssn Customer_ssn, c.first_name, c.last_name, c.country, 
-
-cc.number credit_card_no, cc.type credit_card_type,
-
-m.code merchant_code, m.name merchant_name,
-m.country merchant_country,
-
-t.identifier transaction_ID, t.datetime transaction_datetime,
-t.amount transaction_amount
-
+USE credit;
+SELECT c.ssn, c.first_name , c.last_name, c.country, 
+cc.number, cc.type,
+m.code, m.name, m.country,
+t.identifier, t.datetime, t.amount
 FROM customers c, credit_cards cc, merchants m, transactions t
 WHERE t.number = cc.number
 AND t.code = m.code
 AND cc.ssn = c.ssn
-LIMIT(1000);
+LIMIT 1000;
 
 -- Q3 Give the SQL code for an insertion to the 
 -- table merchants that violates a not null constraint
@@ -38,6 +33,7 @@ UPDATE transactions SET identifier = 2 WHERE identifier = 1;
 -- Q7 Find the last and first names of the different 
 -- Singaporean customers. Print the result in alphabetical order
 -- of the last and first names.
+USE credit;
 SELECT last_name, first_name
 FROM customers c
 ORDER BY last_name, first_name;
@@ -46,6 +42,7 @@ ORDER BY last_name, first_name;
 -- first and last name and total expenditure. Implicitly 
 -- ignore customers who did not use their credit cards or 
 -- do not have a credit card.
+USE credit;
 SELECT c.first_name, c.last_name, SUM(t.amount)
 FROM customers c, transactions t, credit_cards cc
 WHERE cc.ssn = c.ssn

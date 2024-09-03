@@ -3,7 +3,7 @@
   Populate the credit_cards table
 
 ****************************/
-
+USE credit;
 INSERT INTO credit_cards VALUES ('608-71-2352', '5602248898280504', 'bankcard');
 INSERT INTO credit_cards VALUES ('332-36-3186', '5010128777483138', 'mastercard');
 INSERT INTO credit_cards VALUES ('137-54-8553', '5100177279681450', 'mastercard');
