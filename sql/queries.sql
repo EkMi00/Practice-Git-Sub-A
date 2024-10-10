@@ -56,7 +56,7 @@ SELECT DISTINCT c.ssn
 FROM customers c, credit_cards cc, transactions t
 WHERE cc.ssn = c.ssn
 AND t.number = cc.number
-AND t.datetime::DATE = DATE '2017-12-25'
+AND DATE(t.datetime) = DATE('2017-12-25')
 AND cc.type = 'visa';
 
 -- Q10 For each customer and for each credit card type, find how
