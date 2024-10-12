@@ -104,6 +104,7 @@ ORDER BY c1.ssn, c1.type;
 -- Do not use aggregate functions.
 
 -- Nested Method (Late)
+USE credit;
 SELECT DISTINCT m.code, m.name
 FROM merchants m, credit_cards cc1 
 WHERE NOT EXISTS (
