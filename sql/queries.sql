@@ -1,16 +1,23 @@
 USE credit;
-SELECT cc.type,
-COUNT(m.code) AS merchant_count,
-SUM(t.amount)
+SELECT cc.type, COUNT(cc.number) merchants,
+SUM(t.amount) amount_per_merchants
 FROM credit_cards cc, 
 merchants m, 
 transactions t
 WHERE cc.number = t.number
 AND m.code = t.code
-GROUP BY cc.type
-HAVING cc.type = 'bankcard';
--- Find the number of merchants per credit cards type, and
--- amount transacted
+GROUP BY cc.type;
+
+USE credit;
+SELECT cc.type, SUM(t.amount) 
+FROM credit_cards cc, 
+merchants m, 
+transactions t
+WHERE cc.number = t.number
+AND m.code = t.code
+AND cc.type = 'bankcard'; 
+-- Find the total number of merchants per credit cards type, and
+-- and the avg transaction per merchants
 
 USE credit;
 SELECT *
