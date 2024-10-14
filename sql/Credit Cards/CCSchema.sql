@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS merchants (
 );
 
 
-CREATE TABLE IF NOT EXISTS transactions(
+CREATE TABLE IF NOT EXISTS transactions (
     identifier INTEGER PRIMARY KEY,  
     number VARCHAR(20) NOT NULL REFERENCES credit_cards(number),  
     code CHAR(10) NOT NULL REFERENCES merchants(code),  

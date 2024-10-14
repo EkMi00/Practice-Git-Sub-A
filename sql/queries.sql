@@ -1,4 +1,39 @@
 USE credit;
+SELECT cc.type, COUNT(cc.number) merchants,
+SUM(t.amount) amount_per_merchants
+FROM credit_cards cc, 
+merchants m, 
+transactions t
+WHERE cc.number = t.number
+AND m.code = t.code
+GROUP BY cc.type;
+
+SELECT alb.genre, COUNT(DISTINCT c.customer_id) albums_per_customer, 
+FROM customers c, albums alb
+WHERE c.customer_id = g.customer_id
+GROUP BY alb.genre;
+
+USE credit;
+SELECT cc.type, SUM(t.amount) 
+FROM credit_cards cc, 
+merchants m, 
+transactions t
+WHERE cc.number = t.number
+AND m.code = t.code
+AND cc.type = 'bankcard'; 
+-- Find the total number of merchants per credit cards type, and
+-- and the avg transaction per merchants
+
+USE credit;
+SELECT *
+FROM customers c1
+WHERE c1.ssn < "111-11-1111"
+UNION
+SELECT *
+FROM customers c2
+WHERE c2.ssn >= "111-11-1111";
+
+USE credit;
 SELECT c.ssn, c.first_name , c.last_name, c.country, 
 cc.number, cc.type,
 m.code, m.name, m.country,
@@ -56,7 +91,7 @@ SELECT DISTINCT c.ssn
 FROM customers c, credit_cards cc, transactions t
 WHERE cc.ssn = c.ssn
 AND t.number = cc.number
-AND t.datetime::DATE = DATE '2017-12-25'
+AND DATE(t.datetime) = DATE('2017-12-25')
 AND cc.type = 'visa';
 
 -- Q10 For each customer and for each credit card type, find how
@@ -64,9 +99,10 @@ AND cc.type = 'visa';
 -- customer's social security number, the credit card type and 
 -- the number of credit cards of the given type owned. Print zero
 -- if a customer does not own a credit card of the given type.
+USE credit;
 SELECT table1.ssn, table1.type, 
 (CASE WHEN table2.count_type IS NULL
-THEN 0 ELSE count_type END)
+THEN 0 ELSE count_type END) AS count
 FROM
 
 (SELECT c.ssn, cc2.type
@@ -104,6 +140,7 @@ ORDER BY c1.ssn, c1.type;
 -- Do not use aggregate functions.
 
 -- Nested Method (Late)
+USE credit;
 SELECT DISTINCT m.code, m.name
 FROM merchants m, credit_cards cc1 
 WHERE NOT EXISTS (
