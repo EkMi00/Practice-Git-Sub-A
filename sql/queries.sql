@@ -8,6 +8,11 @@ WHERE cc.number = t.number
 AND m.code = t.code
 GROUP BY cc.type;
 
+SELECT alb.genre, COUNT(DISTINCT c.customer_id) albums_per_customer, 
+FROM customers c, albums alb
+WHERE c.customer_id = g.customer_id
+GROUP BY alb.genre;
+
 USE credit;
 SELECT cc.type, SUM(t.amount) 
 FROM credit_cards cc, 
