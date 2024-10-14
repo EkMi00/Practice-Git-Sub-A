@@ -1,9 +1,0 @@
-See README.md for git instructions
-
-Address Book:
-1. 
-John Doe
-+6511111111
-PGPR
-
-2.
